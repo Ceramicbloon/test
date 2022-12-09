@@ -1,0 +1,380 @@
+<head>
+    <script src="https://kit.fontawesome.com/9b4f8a352d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="p5.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="./p5.play.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+    <title>
+        Main
+    </title>
+
+    <title>Info</title>
+
+</head>
+
+<body>
+    <div class="vcontainer">
+        <hr color="black" class="line">
+
+        <p id="variables" ; class='main'>0
+
+        </p>
+
+
+        <p id="yvariables" ; class='main2'>
+            0</p>
+        <hr color="black" class="line">
+
+
+        <p id="xvps" ; class='vpsc'>0
+        </p>
+        <br>
+
+        <p id="yvps" ; class='vpsc'>
+            0</p>
+
+
+    </div>
+
+    <script src="sketch.js"></script>
+
+    <div class="clickbuttoncontainer"><button class="clickbutton" onclick="add()">𝑥</button></div>
+    <div class="helpbuttoncontainer"><button class="helpbutton" ;><a href="info.html">sdfhkjldhf</a></button>
+    </div>
+
+    <div class="rectTop"></div>
+    <div class="rectBottom"></div>
+    <div class="rects1"></div>
+    <div class="rects2"> </div>
+
+    <div class="buttonC">
+        <button class="itemtitle" ; id="upgradeButton" ;>Items</button>
+
+    </div>
+    <div class="buttonC2">
+        <button class="itemtitle" ; id="upgradeButton" ;>Specials</button>
+    </div>
+    <script>
+        var otherdrop = document.getElementsByClassName("helpbutton");
+        var j;
+
+        for (j = 0; j < drop.length; j++) {
+            drop[j].addEventListener("click", function () {
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+
+    </script>
+    <div class="itemContainer">
+        <div class="item" id="alb" ;>
+            <span class="title"> Algebra Ⅰ </span>
+            <button class="buy" ; id="albuy" onclick="albuy()">Buy</button>
+            <br>
+            <span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p style="margin-top: 5px;">3𝑥+2=4</p>
+            </span>
+            <p id="alowned">owned</p>
+            <p id="alvps">Vps: </p>
+
+            <br>
+            <p>An easy curriculum to generate variables.</p>
+            <br>
+            <button id='upgradeButton' ; class=upgradeButton> Upgrades</button>
+            <div class="content">
+                <div class="buttonContainer">
+                    <button class="effButton" onmouseover="aleffC()" ; onmouseleave="alrevert()" ; onclick="aleffU()" ;>
+                    </button>
+                    <button class="yButton" onmouseover="alyC()" ; onmouseleave="alrevert()" ;
+                        onclick="alyU()"></button>
+                    <button class="mButton" onmouseover="alMC()" ; onmouseleave="alrevert()" ;
+                        onclick="alMU()"></button>
+                    <button class="tButton" onmouseover="alTC()" ; onmouseleave="alrevert()" ;
+                        onclick="alTU()"></button>
+
+                </div>
+
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="aldesc">
+                </p>
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="aldesc2">
+                    <br>
+                    <br>
+
+                </p>
+            </div>
+
+        </div>
+        <div class="item" id="geob" ;>
+            <span class="title"> Geometry </span>
+
+            <button class="buy" ; id="geobuy" onclick="geobuy()">Buy</button>
+
+            <span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p style="margin-top: 5px;"><sup><em>sin α</em></sup>&frasl;<sub><em>A </em></sub>=<sup><em> sin
+                            β</em></sup>&frasl;<sub><em>B </em></sub> = </sub><sup><em> sin
+                        </em> 𝛾</sup>&frasl;<sub><em>C </em></sub></p>
+            </span>
+            <p id="geoowned">owned</p>
+            <p id="geovps">Vps: </p>
+
+            <br>
+            <p>Setting sides and angles as 𝑥 allowes the production of even more variables.</p>
+            <br>
+            <button id='upgradeButton' ; class=upgradeButton> Upgrades</button>
+            <div class="content">
+                <div class="buttonContainer">
+                    <button class="effButton" onmouseover="geoeffC()" ; onmouseleave="georevert()" ; onclick="geoeffU()"
+                        ;>
+                    </button>
+                    <button class="yButton" onmouseover="geoyC()" ; onmouseleave="georevert()" ;
+                        onclick="geoyU()"></button>
+                    <button class="mButton" onmouseover="geoMC()" ; onmouseleave="georevert()" ;
+                        onclick="geoMU()"></button>
+                    <button class="tButton" onmouseover="geoTC()" ; onmouseleave="georevert()" ;
+                        onclick="geoTU()"></button>
+
+                </div>
+
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="geodesc">
+                </p>
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="geodesc2">
+                    <br>
+                    <br>
+
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="item" id="altwob" ;>
+            <span class="title"> Algebra ⅠⅠ </span>
+            <button class="buy" ; id="altwobuy" onclick="altwobuy()">Buy</button>
+            <br>
+            <span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p style="margin-top: 5px;">log<sub> 𝒵</sub>(𝑥 ∙ 𝑦) = log<sub> 𝒵</sub>(𝑥) + log<sub> 𝒵</sub>(𝑦)
+                </p>
+            </span>
+            <p id="altwoowned">owned</p>
+            <p id="altwovps">Vps: </p>
+
+            <br>
+            <p>You know it gets serious when whole words starts appearing.</p>
+            <br>
+            <button id='upgradeButton' ; class=upgradeButton> Upgrades</button>
+            <div class="content">
+                <div class="buttonContainer">
+                    <button class="effButton" onmouseover="altwoeffC()" ; onmouseleave="altworevert()" ;
+                        onclick="altwoeffU()" ;>
+                    </button>
+                    <button class="yButton" onmouseover="altwoyC()" ; onmouseleave="altworevert()" ;
+                        onclick="altwoyU()"></button>
+                    <button class="mButton" onmouseover="altwoMC()" ; onmouseleave="altworevert()" ;
+                        onclick="altwoMU()"></button>
+                    <button class="tButton" onmouseover="altwoTC()" ; onmouseleave="altworevert()" ;
+                        onclick="altwoTU()"></button>
+
+                </div>
+
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="altwodesc">
+                </p>
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="altwodesc2">
+                    <br>
+                    <br>
+
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="item" id="pcalb" ;>
+            <span class="title"> Pre-Calculus</span>
+            <button class="buy" ; id="pcalbuy" onclick="pcalbuy()">Buy</button>
+            <br>
+            <span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p style="margin-top: 5px;">𝑓(𝑥)=5𝑥<sup>4𝒾</sup>-𝑥<sup>-2</sup>•√<span
+                        style="text-decoration: overline; text-align: center;">2𝑥</span>
+                </p>
+
+
+            </span>
+            <p id="pcalowned">owned</p>
+            <p id="pcalvps">Vps: </p>
+
+            <br>
+            <p>Exponents, Functions, square roots, and imaginary numbers combine together to generate extremely large
+                quantities of variables.</p>
+            <br>
+            <button id='upgradeButton' ; class=upgradeButton> Upgrades</button>
+            <div class="content">
+                <div class="buttonContainer">
+                    <button class="effButton" onmouseover="pcaleffC()" ; onmouseleave="pcalrevert()" ;
+                        onclick="pcaleffU()" ;>
+                    </button>
+                    <button class="yButton" onmouseover="pcalyC()" ; onmouseleave="pcalrevert()" ;
+                        onclick="pcalyU()"></button>
+                    <button class="mButton" onmouseover="pcalMC()" ; onmouseleave="pcalrevert()" ;
+                        onclick="pcalMU()"></button>
+                    <button class="tButton" onmouseover="pcalTC()" ; onmouseleave="pcalrevert()" ;
+                        onclick="pcalTU()"></button>
+
+                </div>
+
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="pcaldesc">
+                </p>
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="pcaldesc2">
+                    <br>
+                    <br>
+
+                </p>
+            </div>
+
+        </div>
+
+        <div class="item" id="calb" ;>
+            <span class="title"> Calculus </span>
+            <button class="buy" ; id="calbuy" onclick="calbuy()">Buy</button>
+            <br>
+            <span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p><span style="font-size:10">∞</span></p>
+                <p style="margin-top: 5px;"><span style="font-size:20px">∫</span>𝑒<sup>𝑥𝒾</sup>=</sup>√<span
+                        style="text-decoration: overline; text-align: center;">π</span></p>
+                <p><span style="font-size:10">-∞</span></p>
+            </span>
+            <p id="calowned">owned</p>
+            <p id="calvps">Vps: </p>
+
+            <br>
+            <p>Greek letters, integrals, Euler's number, and infinities load the assembly line on maximum overdrive.
+            </p>
+            <br>
+            <button id='upgradeButton' ; class=upgradeButton> Upgrades</button>
+            <div class="content">
+                <div class="buttonContainer">
+                    <button class="effButton" onmouseover="caleffC()" ; onmouseleave="calrevert()" ; onclick="caleffU()"
+                        ;>
+                    </button>
+                    <button class="yButton" onmouseover="calyC()" ; onmouseleave="calrevert()" ;
+                        onclick="calyU()"></button>
+                    <button class="mButton" onmouseover="calMC()" ; onmouseleave="calrevert()" ;
+                        onclick="calMU()"></button>
+                    <button class="tButton" onmouseover="calTC()" ; onmouseleave="calrevert()" ;
+                        onclick="calTU()"></button>
+
+                </div>
+
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="caldesc">
+                </p>
+                <p style="display:flex; justify-content: center;" ; class="desc" ; id="caldesc2">
+                    <br>
+                    <br>
+
+                </p>
+            </div>
+
+        </div>
+    </div>
+    <div class="specialContainer">
+
+        <div class="item" id="clickb" ;>
+            <span class="title"> Click Upgrade</span>
+
+            <button class="buy" ; id="clickbuy" onclick="clickbuy()">Buy</button>
+            <br>
+            <img src="./assets/clicker.png" alt="" class="img">
+            <br>
+            <span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p id="clicktext">Doubles click efficiency</p>
+            </span>
+            <p id="clickowned">owned</p>
+            <p id="clickvps">Click efficiency: </p>
+
+            <br>
+            <p>Are we tired yet?
+        </div>
+
+        <div class="item" id="studentb" ;>
+            <span class="title">Student</span>
+
+            <button class="buy" ; id="studentbuy" onclick="studentbuy()">Buy</button>
+            <br>
+            <img src="./assets/student-guy.png" alt="" class="img">
+            <br>
+            <span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p id="studenttext">Increases both 𝑥 and 𝑦 vps by 10%</p>
+            </span>
+            <p id="studentowned">owned</p>
+
+
+            <br>
+            <p>Hire a student computate variables and ultimately, increase vps
+        </div>
+
+
+        <div class="item" id="teacherb" ;>
+            <span class="title">Teacher</span>
+
+            <button class="buy" ; id="teacherbuy" onclick="teacherbuy()">Buy</button>
+            <br>
+            <img src="./assets/teacher-guy.png" alt="" class="img">
+            <br>
+            <span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p id="teachertext">Increases both 𝑥 and 𝑦 vps by 50%</p>
+            </span>
+            <p id="teacherowned">owned</p>
+
+
+            <br>
+            <p>Hire a teacher computate even more variables.
+        </div>
+
+
+        <div class="item" id="schoolb" ;>
+            <span class="title">School</span>
+
+            <button class="buy" ; id="schoolbuy" onclick="schoolbuy()">Buy</button>
+            <br>
+            <img src="./assets/school.png" alt="" class="img">
+            <br>
+            <span style="font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;">
+                <p id="schooltext">Increases both 𝑥 and 𝑦 vps by 100%</p>
+            </span>
+            <p id="schoolowned">owned</p>
+
+
+            <br>
+            <p>Build an entire school for extreme amounts of variables.
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <script>
+        var drop = document.getElementsByClassName("upgradeButton");
+        var i;
+
+        for (i = 0; i < drop.length; i++) {
+            drop[i].addEventListener("click", function () {
+                var content = this.nextElementSibling;
+                if (content.style.maxHeight) {
+                    content.style.maxHeight = null;
+                } else {
+                    content.style.maxHeight = content.scrollHeight + "px";
+                }
+            });
+        }
+
+
+    </script>
+</body>
